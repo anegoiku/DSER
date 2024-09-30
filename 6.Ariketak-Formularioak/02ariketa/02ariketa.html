@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02Ariketa</title>
+</head>
+<body>
+    <h1>Datu pertsonalak(Formularioa)</h1>
+    <p>Idatzi hurrengo datuak:</p>
+
+    <form action="02ariketa.php" method="post">
+
+        <label for="izena"><strong>Izena:</strong></label>
+        <input type="text" name="izena">
+
+        <label for="abizena"><strong>Abizena:</strong></label>
+        <input type="text" name="abizena">
+
+        <br><br>
+
+        <label for="adina"><strong>Adina:</strong></label>
+        <select name="adina">
+            <option value=""></option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+        </select>
+
+        <label for="pisua"><strong>Pisua(kg):</strong></label>
+        <input type="int" name="pisua">
+
+        <br><br>
+
+        <label for="sexua"><strong>Sexua:</strong></label>
+            <input type="radio" name="sexua" value="gizona">
+            <label for="gizona">Gizona</label>
+            <input type="radio" name="sexua" value="emakumea">
+            <label for="emakumea">Emakumea</label>
+
+        <br><br>
+
+        <label for="egoera"><strong>Egoera zibila:</strong></label>
+            <input type="radio" name="egoera" value="ezkongabea">
+            <label for="ezkongabea">Ezkongabea</label>
+            <input type="radio" name="egoera" value="ezkondua">
+            <label for="ezkondua">Ezkondua</label>
+            <input type="radio" name="egoera" value="bestebat">
+            <label for="bestebat">Beste bat</label>
+
+        <br><br>
+        
+        <label for="afizioak"><strong>Afizioak:</strong></label>
+            <input type="checkbox" name="afizioak[]" value="zinema">
+            <label for="zinema">Zinema</label>
+            <input type="checkbox" name="afizioak[]" value="kirola">
+            <label for="kirola">Kirola</label>
+            <input type="checkbox" name="afizioak[]" value="literatura">
+            <label for="literatura">Literatura</label>
+            <br>
+            <input type="checkbox" name="afizioak[]" value="musika">
+            <label for="musika">Musika</label>
+            <input type="checkbox" name="afizioak[]" value="komikiak">
+            <label for="komikiak">Komikiak</label>
+            <input type="checkbox" name="afizioak[]" value="telebista">
+            <label for="telebista">Telebista</label>
+            
+            <br><br>
+
+            <input type="submit" name="bidali" value="Bidali">
+            <input type="reset" name="ezabatu" value="Ezabatu">
+
+    </form>
+</body>
+</html>

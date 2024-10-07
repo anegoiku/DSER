@@ -10,11 +10,12 @@
 <body>
 
 <?php 
+$id=$_GET["id"];
 $mysqli =new mysqli("localhost", "root", "", "zaldunak");
 if($mysqli->connect_errno){
     echo "Akatsa MySQL konexioan:(" . $mysqli->connect_errno . ") ". $mysqli->connect_error;
 }
-$emaitza= $mysqli->query("SELECT * FROM zaldunak");
+$emaitza= $mysqli->query("SELECT * FROM zaldunak WHERE id=$id");
 ?>
 
 <div class="container mt-5">
@@ -26,8 +27,12 @@ $emaitza= $mysqli->query("SELECT * FROM zaldunak");
                 <th scope="col">ID</th>
                 <th scope="col">Izena</th>
                 <th scope="col">Indarra</th>
+                <th scope="col">Erasoa</th>
+                <th scope="col">Defentsa</th>
+                <th scope="col">Esperientzia</th>
+                <th scope="col">Jaiotze Data</th>
                 <th scope="col">Aktiboan</th>
-                <th scope="col">Akzioak</th>
+                
             </tr>
         </thead>
         <tbody>
@@ -37,24 +42,23 @@ $emaitza= $mysqli->query("SELECT * FROM zaldunak");
                 echo " <tr>
                 <td>" . $row['id'] . "</td>
                 <td>" . $row['izena'] . "</td>
-                <td>" . $row['indarra'] . "</td>";
+                <td>" . $row['indarra'] . "</td>
+                <td>" . $row['erasoa'] . "</td>
+                <td>" . $row['defentsa'] . "</td>
+                <td>" . $row['esperientzia'] . "</td>
+                <td>" . $row['jaiotze_data'] . "</td>";
                 
                 if($row['aktiboan']==1){
                 echo "<td><span class='badge bg-success'>Bai</span></td>";
                 }else{echo "<td><span class='badge bg-danger'>Ez</span></td>";}
                
-                echo"<td>
-                    <a href='ikusi.php?id={$row['id']}' class='btn btn-info btn-sm'>Ikusi</a>
-                    <a href='#' class='btn btn-warning btn-sm'>Aldatu</a>
-                    <a href='#' class='btn btn-danger btn-sm'>Ezabatu</a>
-                    </td>
-                    </tr>";
+                echo"</tr>";
              }
              ?>
             <!-- Gehitu lerro gehiago beharren arabera -->
         </tbody>
     </table>
-    <a href='./form.html' class='btn btn-info btn-sm'>Zalduna gehitu</a>
+    <a href='index.php' class='btn btn-danger btn-sm'>Atzera</a>
 </div>
 
 <!-- Bootstrap JS -->

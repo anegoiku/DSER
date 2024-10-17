@@ -2,12 +2,13 @@
 require(__DIR__. '/../Model/MArma.php');
 require_once(__DIR__. '/../View/VArmas.php');
 
+$id = $_GET['id'];
+
 $con = new Model\MArma();
-$armas = $con-> getArmas();
+$arma = $con-> getArma($id);
 
 $vista = new VArmas();
 $vista->inithtml();
-$vista->cabecera();
-$vista->tablaArmas($armas);
+$vista->verArma($arma);
 $vista->endhtml();
 ?>

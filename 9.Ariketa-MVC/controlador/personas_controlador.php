@@ -7,4 +7,5 @@ $datos  = $per->get_personas();
 //Llamada a la vista
 require_once("vistas/personas_vista1.php");
 require_once("vistas/personas_vista2.php");
+
 ?>

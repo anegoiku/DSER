@@ -4,7 +4,7 @@ $katM=strtolower($kat);
 $kont=0;
 $luz=strlen($kat);
 
-for($i=0, $i<$luz, $i++){
+for($i=0; $i<$luz; $i++){
     
 }
 ?>

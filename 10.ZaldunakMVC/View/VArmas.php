@@ -2,50 +2,53 @@
 require_once (__DIR__ . '/Vista.php');
 
 class VArmas extends Vista{
-    public function tablaArmas($armas){
-        echo '<table class="table">';
-        echo '<thead>';
-        echo '<tr>';
-        echo '<th>ID</th>';
-        echo '<th>Daño</th>';
-        echo '<th>Tipo</th>';
-        echo '</tr>';
-        echo '</thead>';
-        echo '<tbody>';
-        foreach ($armas as $arma) {
-            echo '<tr>';
-            echo '<td>' . $arma["id"] . '</td>';
-            echo '<td>' . $arma["dano"] . '</td>';
-            echo '<td>' . $arma["tipo"] . '</td>';
-            echo '<td><a href="arma.php?id=' . $arma["id"] . '">Ver</a> | <a href="arma$armaEdit.php?id=' . $arma["id"] . '">Editar</a> | <a href="arma$armaDestroy.php?id=' . $arma["id"] . '">Eliminar</a></td>';
-            echo '</tr>';
-        }
-        echo '</tbody>';
-        echo '</table>';  
-    }
+    public function tablaArmas($armas){ ?>
+     <table class="table table-striped">
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>Daño</th>
+            <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($armas as $arma) { ?>
+                <tr>
+                    <td><?= $arma["id"] ?></td>
+                    <td><?=$arma["dano"]?> </td>
+                    <td><?=$arma["tipo"]?></td>
+                    <td>
+                        <a class="btn btn-info bi bi-eye" href="arma.php?id=<?=$arma["id"]?>"></a>
+                        <a class="btn btn-warning bi bi-pencil-square" href="armaEdit.php?id= <?= $arma["id"]?> "></a>
+                        <a class="btn btn-danger bi bi-trash3" href="armaDestroy.php?id= <?= $arma["id"]?>"></a>
+                    </td>
+                </tr>
+            <?php } ?>
+        </tbody>
+     </table>  
+    <?php }
 
-    public function cabecera(){
-        echo '<h1>Armas</h1>';
-        echo '<a href="armaCreate.php">Crear arma</a>';
-    }
+    public function cabecera(){ ?>
+        <h1>Armas</h1>
+       <a href="armaCreate.php">Crear arma</a>
+    <?php }
 
-    public function formArma(){
-        echo '<form action="armaStore.php" method="post">';
-        // echo '<div>';
-        // echo '<label for="id">ID de Arma</label>';
-        // echo '<input type="text" id="id" name="id" required>';
-        // echo '</div>';
-        echo '<div>';
-        echo '<label for="dano">dano</label>';
-        echo '<input type="text" id="dano" name="dano" required>';
-        echo '</div>';
-        echo '<div>';
-        echo '<label for="tipo">Tipo</label>';
-        echo '<input type="tipo" id="tipo" name="tipo" required>';
-        echo '</div>';
-        echo '<button type="submit">Guardar</button>';
-        echo '</form>';
-    }
+    public function formArma(){ ?>
+        <br>
+        <p class="h1">Crear arma:</p>
+        <br>
+        <form action="armaStore.php" method="post">
+            <div class="mb-3">
+                <label for="dano" class="form-label">Daño</label>
+                <input type="text" class="form-control" id="dano" name="dano" required>
+            </div>
+            <div class="mb-3">
+                <label for="tipo" class="form-label">Tipo</label>
+                <input type="text" class="form-control" id="tipo" name="tipo" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    <?php }
 
     public function formEditArma($arma) {
         echo '<form action="armaUpdate.php" method="post">';

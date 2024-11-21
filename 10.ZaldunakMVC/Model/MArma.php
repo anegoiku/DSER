@@ -42,16 +42,16 @@ class MArma extends Conexion{
         $sentencia = $this ->getCon() -> prepare("DELETE FROM arma WHERE id= ?;");
         $sentencia->bind_param("i", $id);
        
-        $sentencia.execute();
-        $sentencia.close();
+        $sentencia->execute();
+        $sentencia->close();
     }
 
     public function modificarArma($arma){
         $sentencia =$this-> getCon() -> prepare("UPDATE arma SET dano=? ,tipo=?  WHERE id = ?;");
         $sentencia-> bind_param("isi", $arma["dano"], $arma["tipo"], $arma["id"]);
         
-        $sentencia.execute();
-        $sentencia.close();
+        $sentencia->execute();
+        $sentencia->close();
     }
 }
 ?>

@@ -80,7 +80,7 @@ class VUsuario extends Vista {
     }
     public function eliminarSeguro($usuario){
         echo '<form action="usuarioDestroy.php" method="post">';
-        echo '<input type="hidden" value="'.$usuario. ' name="'.$usuario'"">';
+        echo '<input type="hidden" value="'.$usuario. ' name="'.$usuario.'">';
         echo "<p>Estas seguro de que quieres eliminar?</p>";
         echo '<button type="submit" value="si">Si</button>';
         echo '<button type="submit" value="no">No</button>';

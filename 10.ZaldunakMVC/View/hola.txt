@@ -1,0 +1,35 @@
+Aquí te explico para qué sirve cada uno de los metadatos que mencionas:
+
+1. <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">: Indica que el tipo de contenido de la página es HTML y que utiliza la codificación de caracteres UTF-8. Esto garantiza que la página web puede mostrar una amplia gama de caracteres y símbolos.
+
+2. <meta name="Language" content="es-es">: Define el idioma del contenido de la página como español de España (es-es).
+
+3. <meta content="https://imagessl.casadellibro.com/t1e/i/logo-cdl-v-v2.svg" property="og:image">: Proporciona la URL de una imagen para usar cuando la página se comparte en redes sociales mediante el protocolo Open Graph. En este caso, es el logo de "Casa del Libro".
+
+4. <meta name="description" content="Todos los libros, eBooks y mejores eReaders están en Casa del Libro: ¡Descubre ofertas y ENVÍOS GRATIS!">: Ofrece una breve descripción de la página que puede aparecer en resultados de motores de búsqueda y al compartirla en redes sociales.
+
+5. <meta name="robots" content="index,follow">: Indica a los motores de búsqueda que pueden indexar la página y seguir los enlaces que contiene.
+
+6. <meta content="https://www.casadellibro.com" property="og:url">: Proporciona la URL de la página que se comparte utilizando Open Graph, que será "https://www.casadellibro.com".
+
+7. <meta content="Libros e eBooks, descuentos y envíos gratis | Casa del Libro" property="og:title">: Define el título que se mostrará cuando la página se comparta en redes sociales mediante Open Graph.
+
+8. <meta content="Todos los libros, eBooks y mejores eReaders están en Casa del Libro: ¡Descubre ofertas y ENVÍOS GRATIS!" property="og:description">: Proporciona una descripción para acompañar el contenido compartido mediante Open Graph, similar a la meta descripción para motores de búsqueda.
+
+9. <meta content="website" property="og:type">: Especifica el tipo de objeto Open Graph como un "sitio web".
+
+10. <meta content="casadellibro" property="og:site_name">: Define el nombre del sitio web cuando se comparte mediante Open Graph, en este caso "Casa del Libro".
+
+11. <meta content="es-es" property="og:locale">: Establece el idioma y la localización de la página para Open Graph, en este caso español de España (es-es).
+
+12. <meta content="135024919855831" property="fb:app_id">: Proporciona el ID de la aplicación de Facebook que está asociada con la página.
+
+13. <meta charset="utf-8">: Este es otro metadato que define la codificación de caracteres como UTF-8, esencial para la correcta visualización de caracteres especiales.
+
+14. <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width">: Controla el comportamiento de la página en dispositivos móviles, ajustando el zoom y asegurando que la página se ajuste correctamente al ancho de la pantalla.
+
+15. <meta name="google-site-verification" content="bASvu06DRcNNx6fp7C_JBf75V2C6zeq9Kcu8MBY5rM8">: Verifica la propiedad del sitio web en Google Search Console, una herramienta utilizada para gestionar el rendimiento de la página en los resultados de búsqueda.
+
+16. <meta name="facebook-domain-verification" content="kuxodnogcxh8fl23akcf3vcs22kui2">: Verifica la propiedad del dominio para integraciones y herramientas de Facebook, como el uso de píxeles o seguimiento.
+
+Estos metadatos son fundamentales para el SEO, la correcta visualización en dispositivos móviles, la integración con redes sociales y la verificación de propiedad en herramientas como Google y Facebook.

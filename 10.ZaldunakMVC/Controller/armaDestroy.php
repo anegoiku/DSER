@@ -8,6 +8,6 @@ echo "<script>if(confirm(Estas seguro de que quieres eliminar este usuario?)){
     ".$con->eliminarArma( $id ). "}</script>";
 
 
-header("Location: usuarios.php");
+header("Location: armas.php");
 exit();
 ?>
